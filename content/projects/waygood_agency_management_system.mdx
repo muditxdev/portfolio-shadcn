@@ -1,0 +1,91 @@
+---
+title: Waygood Agency Management System
+description: A 3-panel software for agency and event management with multi-role architecture
+date: 2024-11-01
+website: https://waygood.com
+tags:
+  - label: Next.js
+  - label: Node.js
+  - label: MongoDB
+  - label: Tailwind
+  - label: Material UI
+  - label: AWS
+  - label: JWT
+---
+
+A comprehensive agency management platform with three distinct panels for Super Admin, Agency Admins, and Students. Built to streamline event management and agency operations with modern web technologies.
+
+## Features
+
+- **3-Panel Architecture**: Separate interfaces for Super Admin, Agency Admin & Students
+- **Event Management**: Step-by-step event creation wizard with tracking
+- **Role-Based Access**: Granular permissions system
+- **Agency Dashboard**: Manage multiple agencies from single interface
+- **Calendar System**: Integrated event scheduling
+- **SSR Optimization**: Next.js server-side rendering for SEO
+
+## Tech Stack
+
+- **Frontend**: Next.js 14 (App Router)
+- **UI Library**: Material UI + Tailwind CSS
+- **State Management**: Zustand
+- **Backend**: Next.js API Routes
+- **Database**: MongoDB Atlas
+- **Caching**: Redis
+- **Deployment**: Vercel + AWS EC2
+
+## Implementation
+
+### Frontend
+
+- Dynamic dashboard with agency analytics
+- Drag-n-drop event builder
+- Role-specific navigation menus
+- Server-rendered agency profiles
+- Interactive calendar component
+
+### Backend
+
+- Next.js API routes for CRUD operations
+- JWT authentication flow
+- Role validation middleware
+- Event reminder cron jobs
+- PDF certificate generation
+
+### Database
+
+- Separate collections for agencies, events & users
+- Aggregation pipelines for reports
+- Indexed search for events
+- Daily backups to S3 buckets
+
+### Deployment
+
+- Frontend hosted on Vercel Edge
+- Backend on AWS EC2 with load balancing
+- MongoDB Atlas cluster with replica sets
+- Redis caching for frequent queries
+
+## How It Works
+
+1. Super Admin creates agency accounts
+2. Agency Admins setup events/programs
+3. Students register through portal
+4. Real-time event tracking
+5. Automated certificate distribution
+
+## Challenges Faced
+
+- Complex role hierarchy implementation
+- Real-time event status tracking
+- SSR performance optimization
+- Bulk student onboarding
+- Cross-panel data synchronization
+
+## Future Enhancements
+
+- Mobile app for event participation
+- AI-powered event recommendations
+- Payment gateway integration
+- Social sharing features
+- Multi-language support
