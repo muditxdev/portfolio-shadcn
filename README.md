@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="" src="/.github/assets/cover.png" />
+  <img alt="" src="/.github/images/hero.webp" />
 </p>
 
 <h1 align="center">
