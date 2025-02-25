@@ -2,11 +2,11 @@ import type { Technology } from '@/types/technology';
 
 const technologies: Technology[] = [
   {
-    name: 'HTML',
+    name: 'React',
     image: '/images/person/janedoe.jpg'
   },
   {
-    name: 'CSS',
+    name: 'Next.js',
     image: '/images/person/emilysmith.jpg'
   },
   {
@@ -14,15 +14,11 @@ const technologies: Technology[] = [
     image: '/images/person/michaeljohnson.jpg'
   },
   {
-    name: 'React',
+    name: 'Node.js',
     image: '/images/person/michaeljohnson.jpg'
   },
   {
-    name: 'Next.js',
-    image: '/images/person/michaeljohnson.jpg'
-  },
-  {
-    name: 'Python',
+    name: 'MongoDB',
     image: '/images/person/michaeljohnson.jpg'
   }
 ];

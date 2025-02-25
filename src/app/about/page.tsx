@@ -36,7 +36,7 @@ export default function About() {
           <ImageTrail containerRef={heroRef}>
             {exampleImages.map((image, index) => (
               <div
-                key={index}
+                key={`image_${index}`}
                 className="relative flex h-24 w-24 overflow-hidden"
               >
                 <Image
@@ -56,13 +56,13 @@ export default function About() {
             as="h1"
             className="leading-wide tracking-relaxed z-20 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
           >
-            Innovator
+            Tech
           </TextReveal>
           <TextReveal
             as="h1"
             className="leading-wide tracking-relaxed z-20 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
           >
-            Designer
+            Enthusiast
           </TextReveal>
           <motion.div
             className="mt-8"
@@ -87,27 +87,26 @@ export default function About() {
                 as="h3"
                 className="font-serif text-3xl leading-tight sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl"
               >
-                I create captivating designs by blending aesthetics, motion, and
-                technology.
+                The Developer Behind the Code
               </TextReveal>
               <TextReveal
                 as="p"
                 className="text-muted-foreground text-base leading-relaxed sm:text-lg md:text-lg lg:text-xl xl:text-2xl"
               >
-                My journey into creativity began with a spark of curiosity about
-                how ideas could come to life on a screen. Fascinated by the
-                interplay of design and technology, I started exploring web
-                development, motion graphics, and interface design through
-                self-driven projects. With every experiment, my skills grew, and
-                what began as a hobby soon became a passion for crafting
-                meaningful digital experiences. As I honed my abilities, I
-                sought opportunities to apply them in real-world settings,
-                turning concepts into polished outcomes. Today, my approach
-                combines creativity, problem-solving, and technical expertise to
-                create work that is both functional and impactful.
+                As a BCA graduate from Poddar International College, I've
+                transformed my academic foundation into real-world solutions
+                through:
               </TextReveal>
+              <ul className="text-muted-foreground text-base leading-relaxed sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
+                <li key="achievement-1">🛠️ 5000+ hours of hands-on development experience</li>
+                <li key="achievement-2">🌐 15+ production-grade projects delivered</li>
+                <li key="achievement-3">
+                  ⚡ Performance optimization specialist (30-40% load time
+                  improvements achieved)
+                </li>
+              </ul>
               <Button asChild variant={'outline'} className="rounded-full px-6">
-                <a href="resume.pdf" target="_blank">
+                <a href="Mudit-Resume.pdf" target="_blank">
                   View Resume <ArrowUpRightIcon className="ml-2 size-5" />
                 </a>
               </Button>
@@ -152,7 +151,7 @@ export default function About() {
             >
               <div className="flex h-full w-full flex-wrap items-center justify-start gap-4">
                 {technologies.map((technology, index) => (
-                  <>
+                  <React.Fragment key={`tech_fragment_${index}`}>
                     <TechnologyCard
                       key={`technology_${index}`}
                       name={technology.name}
@@ -166,7 +165,7 @@ export default function About() {
                         containerRef={testimonialsRef}
                       />
                     )}
-                  </>
+                  </React.Fragment>
                 ))}
               </div>
             </div>
@@ -214,13 +213,13 @@ export default function About() {
               </Link>
               {contact.socials.map(({ Icon, name, href }, index) => (
                 <Link
+                  key={`contact-social_${index}`}
                   target="_blank"
                   href={href}
                   className={cn(
                     buttonVariants({ variant: 'link' }),
                     'h-min w-min gap-1 p-0 text-sm sm:text-base md:text-lg'
                   )}
-                  key={`contact-social_${index}`}
                 >
                   {Icon && <Icon className="h-4 w-4" />}
                   {name}

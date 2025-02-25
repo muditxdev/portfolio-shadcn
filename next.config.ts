@@ -2,6 +2,9 @@ import type { NextConfig } from 'next';
 import { withContentCollections } from '@content-collections/next';
 
 const nextConfig: NextConfig = {
+  images:{
+    domains: ["images.unsplash.com"], 
+  },
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   experimental: {
     serverActions: {

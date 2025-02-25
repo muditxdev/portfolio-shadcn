@@ -49,6 +49,7 @@ export default function BlogPage(): React.ReactElement {
       new Date(b.data.date ?? b.file.name).getTime() -
       new Date(a.data.date ?? a.file.name).getTime()
   );
+console.log("posts",posts);
 
   return (
     <main className="my-14 flex-1">
