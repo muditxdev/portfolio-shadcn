@@ -93,9 +93,9 @@ export default function About() {
                 as="p"
                 className="text-muted-foreground text-base leading-relaxed sm:text-lg md:text-lg lg:text-xl xl:text-2xl"
               >
-                As a BCA graduate from Poddar International College, I've
+              {`  As a BCA graduate from Poddar International College, I've
                 transformed my academic foundation into real-world solutions
-                through:
+                through:`}
               </TextReveal>
               <ul className="text-muted-foreground text-base leading-relaxed sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
                 <li key="achievement-1">{`🛠️ 5000+ hours of hands-on development experience`}</li>
