@@ -98,11 +98,11 @@ export default function About() {
                 through:
               </TextReveal>
               <ul className="text-muted-foreground text-base leading-relaxed sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
-                <li key="achievement-1">🛠️ 5000+ hours of hands-on development experience</li>
-                <li key="achievement-2">🌐 15+ production-grade projects delivered</li>
+                <li key="achievement-1">{`🛠️ 5000+ hours of hands-on development experience`}</li>
+                <li key="achievement-2">{`🌐 15+ production-grade projects delivered`}</li>
                 <li key="achievement-3">
-                  ⚡ Performance optimization specialist (30-40% load time
-                  improvements achieved)
+                 {` ⚡ Performance optimization specialist (30-40% load time
+                  improvements achieved)`}
                 </li>
               </ul>
               <Button asChild variant={'outline'} className="rounded-full px-6">
