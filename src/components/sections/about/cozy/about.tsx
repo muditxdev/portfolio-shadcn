@@ -23,10 +23,10 @@ function About() {
                 as="p"
                 className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400"
               >
-                I'm a passionate Frontend Developer with over 2 years of
+                {`I'm a passionate Frontend Developer with over 2 years of
                 expertise in creating responsive and intuitive web applications.
                 Specializing in React and Next.js, I transform complex
-                requirements into elegant, user-friendly solutions.
+                requirements into elegant, user-friendly solutions.`}
               </TextReveal>
               <div className="flex gap-2">
                 <Button asChild variant={'outline'}>
