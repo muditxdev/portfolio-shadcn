@@ -30,9 +30,9 @@ function About() {
               </TextReveal>
               <div className="flex gap-2">
                 <Button asChild variant={'outline'}>
-                  <a href="Mudit-Resume.pdf" target="_blank">
+                  <Link href="Mudit-Resume.pdf" target="_blank">
                     View Resume <ArrowUpRightIcon className="ml-2 size-5" />
-                  </a>
+                  </Link>
                 </Button>
                 <Button asChild>
                   <Link href="/about">Learn More</Link>
