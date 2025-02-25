@@ -5,6 +5,7 @@ import { exampleImages } from '@/lib/example-images';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
+import Image from 'next/image';
 
 const NotFoundPage: React.FC = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
@@ -37,10 +38,12 @@ const NotFoundPage: React.FC = () => {
           containerRef={containerRef}
         >
           <div className="h-20 w-20 overflow-hidden md:h-48 md:w-48">
-            <img
+            <Image
               src={image}
               alt={`Example ${index + 1}`}
-              className="h-full w-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 80px, 192px"
             />
           </div>
         </Screensaver>

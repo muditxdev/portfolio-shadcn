@@ -21,34 +21,37 @@ import TechnologyCard from '@/components/sections/technologies/modern/technology
 import { technologies } from '@/components/sections/technologies/config';
 import ImageTrail from '@/components/motion/motion-trail';
 import { exampleImages } from '@/lib/example-images';
+import Image from 'next/image';
 
 export default function About() {
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
-  const heroRef = useRef<HTMLDivElement>(null)
+  const heroRef = useRef<HTMLDivElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
 
   return (
     <main className="flex-1 px-4 sm:px-8 md:px-12 lg:px-16 2xl:px-24">
-      <section className="flex h-[calc(100svh-(--spacing(14)))] justify-center items-center pb-12 relative overflow-hidden -mx-4 sm:-mx-8 md:-mx-12 lg:-mx-16 2xl:-mx-24">
+      <section className="relative -mx-4 flex h-[calc(100svh-(--spacing(14)))] items-center justify-center overflow-hidden pb-12 sm:-mx-8 md:-mx-12 lg:-mx-16 2xl:-mx-24">
         <div className="absolute top-0 left-0 z-0" ref={heroRef}>
           <ImageTrail containerRef={heroRef}>
             {exampleImages.map((image, index) => (
               <div
                 key={index}
-                className="flex relative overflow-hidden w-24 h-24 "
+                className="relative flex h-24 w-24 overflow-hidden"
               >
-                <img
+                <Image
                   src={image}
                   alt="image"
                   loading="lazy"
-                  className="object-cover absolute inset-0"
+                  fill
+                  className="absolute inset-0 object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
             ))}
           </ImageTrail>
         </div>
-        <div className="container relative mx-auto flex flex-col items-center px-4">
+        <div className="relative container mx-auto flex flex-col items-center px-4">
           <TextReveal
             as="h1"
             className="leading-wide tracking-relaxed z-20 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
@@ -89,7 +92,7 @@ export default function About() {
               </TextReveal>
               <TextReveal
                 as="p"
-                className="text-base leading-relaxed text-muted-foreground sm:text-lg md:text-lg lg:text-xl xl:text-2xl"
+                className="text-muted-foreground text-base leading-relaxed sm:text-lg md:text-lg lg:text-xl xl:text-2xl"
               >
                 My journey into creativity began with a spark of curiosity about
                 how ideas could come to life on a screen. Fascinated by the
