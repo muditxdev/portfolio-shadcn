@@ -30,7 +30,10 @@ const Header = ({ loader }: HeaderProps) => {
       }}
     >
       <div className={styles.bar}>
-        <MotionLink href="/" className="inline-flex items-center justify-center text-md font-semibold">
+        <MotionLink
+          href="/"
+          className="text-md inline-flex items-center justify-center font-semibold capitalize"
+        >
           {meta.author.name}
         </MotionLink>
         <div onClick={() => setIsActive(!isActive)} className={styles.el}>
@@ -38,10 +41,15 @@ const Header = ({ loader }: HeaderProps) => {
             <motion.p
               variants={opacity}
               animate={!isActive ? 'open' : 'closed'}
+              className="capitalize"
             >
               Menu
             </motion.p>
-            <motion.p variants={opacity} animate={isActive ? 'open' : 'closed'}>
+            <motion.p
+              variants={opacity}
+              animate={isActive ? 'open' : 'closed'}
+              className="capitalize"
+            >
               Close
             </motion.p>
           </div>

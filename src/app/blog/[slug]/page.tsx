@@ -54,7 +54,7 @@ export default async function BlogPage(props0: {
   const { slug } = params;
   const page = blog.getPage([slug]);
   if (!page) notFound();
-
+console.log(params)
   const {
     data: { toc, body, structuredData }
   } = page;

@@ -49,8 +49,6 @@ export default function BlogPage(): React.ReactElement {
       new Date(b.data.date ?? b.file.name).getTime() -
       new Date(a.data.date ?? a.file.name).getTime()
   );
-console.log("posts",posts);
-
   return (
     <main className="my-14 flex-1">
       <script
@@ -80,7 +78,7 @@ console.log("posts",posts);
             description={post.data.description}
             key={`post_${index}`}
             date={new Date(post.data.date ?? post.file.name)}
-            thumbnail={`/images/blog/${post.slugs[0]}/cover.jpg`}
+            thumbnail={`/images/blog/${post.slugs[0]}/cover.webp`}
           />
         ))}
       </section>
