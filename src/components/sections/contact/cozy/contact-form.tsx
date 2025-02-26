@@ -30,7 +30,7 @@ import {
   ContactForm as ContactFormType,
   ContactFormSchema
 } from '@/lib/validators';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { contact } from '@/components/sections/contact/config';
 import { toast } from 'sonner';
@@ -48,8 +48,12 @@ export default function ContactForm() {
   const { execute, result, status } = useAction(contactSubmit);
   const [isOpen, setIsOpen] = useState(false);
 
-  // todo: probably refactor this, setIsOpen is not clean
-  // values: ContactFormType
+  useEffect(() => {
+    if (result.data?.success) {
+      form.reset();
+    }
+  }, [result.data, form]);
+
   async function onSubmit(values: ContactFormType) {
     if (process.env.NEXT_PUBLIC_CONTACT_FORM_ENABLED === 'true') {
       setIsOpen(true);
@@ -75,7 +79,12 @@ export default function ContactForm() {
       );
       return;
     }
-    execute({ ...form.getValues(), token });
+
+    try {
+      await execute({ ...form.getValues(), token });
+    } catch (error) {
+      console.error('Form submission error:', error);
+    }
   }
 
   return (
