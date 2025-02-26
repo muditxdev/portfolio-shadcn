@@ -9,11 +9,11 @@ const metadata: Metadata = {
   site: {
     title: 'Mudit Jain',
     description: 'Portfolio of frontend developer Mudit Jain.',
-    url: 'https://www.example.com',
+    url: 'https://portfolio-mudit.vercel.app/',
     keywords: [
-      'web design',
-      'UI design',
-      'web development',
+      'react',
+      'Next.js',
+      'software development',
       'portfolio',
       'Mudit Jain'
     ],

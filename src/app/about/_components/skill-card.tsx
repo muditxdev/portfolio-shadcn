@@ -79,7 +79,7 @@ export default function SkillCard({
             <DialogTitle className="text-3xl font-bold leading-8 tracking-tight text-zinc-950 dark:text-zinc-50">
               <TextReveal>{name}</TextReveal>
             </DialogTitle>
-            <DialogSubtitle className="text-md text-muted-foreground text-zinc-700 dark:text-zinc-400">
+            <DialogSubtitle className="text-md text-muted-foreground dark:text-zinc-400">
               <TextReveal>
                 {trimLen != -1
                   ? trimString(trimLen, description || '')
@@ -109,7 +109,7 @@ export default function SkillCard({
               {description}
             </DialogSubtitle> */}
             <DialogDescription
-              className="text-md text-muted-foreground text-zinc-700 dark:text-zinc-400"
+              className="text-md text-muted-foreground dark:text-zinc-400"
               disableLayoutAnimation
               variants={{
                 initial: { opacity: 0, scale: 0.8, y: 100 },

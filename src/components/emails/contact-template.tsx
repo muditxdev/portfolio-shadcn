@@ -7,7 +7,6 @@ import {
   Heading,
   Hr,
   Html,
-  Img,
   Link,
   Preview,
   Row,
@@ -23,9 +22,9 @@ interface ContactEmailProps {
   message: string;
 }
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : '';
+// const baseUrl = process.env.VERCEL_URL
+//   ? `https://${process.env.VERCEL_URL}`
+//   : '';
 
 export const ContactEmail = ({ name, email, message }: ContactEmailProps) => {
   const previewText = `Message from ${name} on Portfolio`;
@@ -40,17 +39,17 @@ export const ContactEmail = ({ name, email, message }: ContactEmailProps) => {
           <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-solid border-[#eaeaea] p-[20px]">
             <Section className="mt-[32px]">
               {/* TODO: Swap this out with a good icon */}
-              <Img
+              {/* <Img
                 src={`${baseUrl}/favicon/android-chrome-512x512.png`}
                 width="40"
                 height="37"
                 alt="Logo"
                 className="mx-auto my-0"
-              />
+              /> */}
             </Section>
-            <Heading className="mx-0 my-[30px] p-0 text-center text-[24px] font-normal text-black">
+            {/* <Heading className="mx-0 my-[30px] p-0 text-center text-[24px] font-normal text-black">
               Message from <strong>{name}</strong> on <strong>Portfolio</strong>
-            </Heading>
+            </Heading> */}
             <Text className="text-[14px] leading-[24px] text-black">
               Hello,
             </Text>

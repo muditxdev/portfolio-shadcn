@@ -63,7 +63,7 @@ export function TurnstileModal({ open, callback }: TurnstileModalProps) {
           <div className={'z-1 absolute h-[65px] w-full px-4 md:px-0 md:py-0'}>
             <div
               className={
-                'flex h-[65px] w-full items-center justify-between rounded-md border border-border border-muted-foreground/50 bg-muted px-4'
+                'flex h-[65px] w-full items-center justify-between rounded-md border-muted-foreground/50 bg-muted px-4'
               }
             >
               <div className={'flex items-center justify-center gap-2'}>
